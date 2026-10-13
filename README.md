@@ -5,14 +5,14 @@
 
 В нужном месте php-странички создаём форму для его отображения:
 ```HTML
-                 <?php
-                 $filePath = __DIR__ . '/tg.txt';
-                 if (file_exists($filePath) && is_readable($filePath)) {
-                     $fileContent = file_get_contents($filePath);
-                     echo "<pre>" . htmlspecialchars($fileContent) . "</pre>";
-                 } else {
-                     echo "<p>Файл <code>tg.txt</code> не найден или недоступен для чтения.</p>";
-                 }
-                 ?>
+<?php
+   $filePath = __DIR__ . '/tg.txt';
+   if (file_exists($filePath) && is_readable($filePath)) {
+       $fileContent = file_get_contents($filePath);
+       echo "<pre>" . htmlspecialchars($fileContent) . "</pre>";
+   } else {
+       echo "<p>Файл <code>tg.txt</code> не найден или недоступен для чтения.</p>";
+   }
+?>
 ```
 Дальше всё зависит от дизайна и может выглядеть примерно так: [сайт rn6ljt](http://176.192.125.149:88/)
